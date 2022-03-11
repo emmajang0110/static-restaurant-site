@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS list-->
+        <link href="css/style-nav-footer.css" rel="stylesheet">
+        <link href="css/style-reservation.css" rel="stylesheet">
+
+        <title>EmmaJang Restaurant website</title>
+    </head>
+
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="images/EmmaJang-Restaurant-logo.png" alt="EmmaJang-Restaurant-logo" height="30px"></a>
+        </div>
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">≡</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/menu.html">Menu</a>
+                    <ul>
+                        <li><a href="/menu.html#main-course">Main Course</a>
+                            <ul>
+                                <li><a href="/menu.html#western">Western</a>
+                                    <ul>
+                                        <li><a href="/menu.html#poultry">Poultry</a></li>
+                                        <li><a href="/menu.html#meat">Meat</a></li>
+                                        <li><a href="/menu.html#pork">Pork</a></li>
+                                        <li><a href="/menu.html#fish">Fish</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/menu.html#asian">Asian</a></li>
+                                <li><a href="/menu.html#pasta">Pasta</a></li>
+                            </ul>
+                        <li><a href="/menu.html#sides">Sides</a>
+                            <ul>
+                                <li><a href="/menu.html#starter-and-snacks">Starter & Snacks</a></li>
+                                <li><a href="/menu.html#soup-and-salad">Soup & Salad</a></li>
+                                <li><a href="/menu.html#burger">Burger</a></li>
+                                <li><a href="/menu.html#pizza">Pizza</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/menu.html#beverage">Beverage</a>
+                            <ul>
+                                <li><a href="/menu.html#smoothies">Smoothies</a></li>
+                                <li><a href="/menu.html#fresh-fruit-juice">Fresh Fruit Juice</a></li>
+                                <li><a href="/menu.html#tea">Tea</a></li>
+                                <li><a href="/menu.html#dairy">Diary</a></li>
+                                <li><a href="/menu.html#flings">Flings</a></li>
+                                <li><a href="/menu.html#others">Others</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/reservation.html">Reservation</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+    <div class="container">
+        <div id="header-bar"></div>
+        
+        <div id="reservation">
+            <form>
+                <h1>Reservation</h1>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label>First Name</label>
+                    <input type="text" id="firstname" placeholder="Enter First Name..." required>
+                    <label>Last Name</label>
+                    <input type="text" id="lastname" placeholder="Enter Last Name..." required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter Phone Number..." required>
+                    <label>Email Address</label>
+                    <input type="text" id="email"placeholder="Enter Email Address..." required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Reservation Details</legend>
+                    <label>Date</label>
+                    <input type="date" id="reservation-date" placeholder="Choose Date..." required>
+                    <label>Time</label>
+                    <input type="time" id="reservation-time" placeholder="Choose Time..." required>
+                    <label>Number of Adult(s)</label>
+                    <input type="text" id="adults" placeholder="Enter Number of Adult(s)..." required>
+                    <label>Number of Child(ren)</label>
+                    <input type="text" id="children" placeholder="Enter Number of Child(ren)...">
+                    <label>Remark</label>
+                    <input type="text" id="remark" placeholder="Leave your message here...">
+                </fieldset>
+
+                <button>Confirm</button>
+            </form>
+        </div>
+
+        <div id="footer-bar"></div>
+    </div>
+    </body>
+
+    <footer>
+        <div class="copyright">
+            <p><b>Copyright &#169 EmmaJang Restaurant. All Rights Reserved.</b></p>
+        </div>
+        <div class="copyright">
+            <p style="font-style:italic">** Coding & Design from emmajang0110 * Only for Self-practice purpose **</p>
+        </div>
+        <div class="copyright">
+            <p style="font-style:italic">** All images and information are taken from the Internet. **</p>
+        </div>
+    </footer>
+</html>

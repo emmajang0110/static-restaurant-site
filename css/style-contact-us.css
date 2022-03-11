@@ -1,0 +1,114 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 15px;
+}
+
+h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;
+    width: 80%;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header-bar"
+    "contact-us"
+    "footer-bar";
+    grid-gap: 5px;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    padding: var(--main-padding);
+    margin: auto;
+}
+
+#contact-us {
+    grid-area: contact-us;
+    padding: var(--main-padding);
+    border-radius: var(--main-radius);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: peachpuff;
+    border: 3px solid #FC9483;
+}
+
+.text {
+    padding: var(--main-padding);
+    background-color: peachpuff;
+    text-align: center;
+    width: 100%;
+    margin-right: var(--main-padding);
+}
+
+.text p {
+    font-size: 12px;
+    text-align: justify;
+}
+
+#social-media {
+    padding: var(--main-padding);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: var(--main-padding);
+}
+
+.card {
+    background-color: peachpuff;
+    border-radius: var(--main-radius) ;
+    height: 100px;
+    width: 40%;
+    padding: var(--main-padding);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#contact-info {
+    background-color: #FFFFF0;
+    font-size: 12px;
+    text-align: justify;
+    padding: var(--main-padding);
+    border-radius: var(--main-radius);
+    margin-bottom: var(--main-padding);
+    margin-left: var(--main-padding);
+    margin-right: var(--main-padding);
+    width: 80%;
+}
+
+#header-bar {
+    grid-area: header-bar;
+    padding-top: 50px;
+    background-color: #FFFFF0;
+    width: 100%;
+    display: block;
+}
+
+#footer-bar {
+    grid-area: footer-bar;
+    padding-bottom: 35px;
+    background-color: #FFFFF0;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 620px) {
+    #header-bar {
+        padding-top: 30px;
+    }
+    
+    #footer-bar {
+        padding-bottom: 40px;
+    }
+}
+

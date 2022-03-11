@@ -1,0 +1,158 @@
+:root {
+  --background: #F9D3A5;
+  --main-radius: 5px;
+  --main-padding: 15px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+  text-decoration: none;
+}
+
+body {
+  background-color: #FFFFF0;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 10 px rgba(0,0,0,0.1);
+  background-color: var(--background);
+  padding: 0;
+  padding-left: 1.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  text-transform: uppercase;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a{
+  font-size: 15px;
+  padding: 20px;
+  color: #FFFFFF;
+  display: block;
+  text-align: center;
+}
+
+header .navbar ul li a:hover{
+  background-color: #F1948A;
+  color: maroon;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 140px;
+  background-color: #FCC1AC;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  height: 100%;
+}
+
+header .navbar ul li ul li ul {
+  left: 140px;
+  top: 0;
+  width: 140px;
+  background-color: #FCC1AC;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 25px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: none;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--background);
+  height: auto;
+  color: black;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+@media(max-width: 620px) {
+  header {
+      padding: 5px;
+  }
+
+  header .logo { 
+    margin: auto;
+  }
+
+  header label {
+      display: initial;
+  }
+
+  header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #F9D3A5;
+      border-top: 1px solid rgba(0,0,0,.1);
+      display: none;
+  }
+
+  header .navbar ul li{
+      width: 100%;
+  }
+
+  header .navbar ul li ul{
+      position: relative;
+      width: 100%;
+  }
+
+  header .navbar ul li ul li{
+      width: 100%;
+      background-color: #F8DDBB;
+  }
+
+  #menu-bar:checked ~ .navbar {
+      display: initial;
+  }
+
+  footer {
+    height: auto;
+    font-size: 8px;
+  }
+}

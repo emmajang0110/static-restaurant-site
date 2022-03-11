@@ -1,0 +1,88 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 15px;
+}
+
+h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    width: 50%;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header-bar"
+    "reservation"
+    "footer-bar";
+    grid-gap: 5px;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+    text-align: center;
+    padding: var(--main-padding);
+    margin: auto;
+}
+
+#about-us {
+    grid-area: reservation;
+    padding: var(--main-padding);
+    border-radius: var(--main-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    background-color: peachpuff;
+}
+
+.text {
+    padding: var(--main-padding);
+    background-color: peachpuff;
+    text-align: left;
+    width: 80%;
+    margin-right: var(--main-padding);
+}
+
+.text p {
+    font-size: 12px;
+    text-align: justify;
+}
+
+#about-us .img {
+    padding: var(--main-padding);
+}
+
+#header-bar {
+    grid-area: header-bar;
+    padding-top: 50px;
+    background-color: #FFFFF0;
+    width: 100%;
+    display: block;
+}
+
+#footer-bar {
+    grid-area: footer-bar;
+    padding-bottom: 45px;
+    background-color: #FFFFF0;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 620px) {
+    #header-bar {
+        padding-top: 30px;
+    }
+    
+    #footer-bar {
+        padding-bottom: 40px;
+    }
+}
+
