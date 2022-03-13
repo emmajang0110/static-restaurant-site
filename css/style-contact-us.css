@@ -102,13 +102,28 @@ h1 {
     justify-content: center;
 }
 
-@media only screen and (max-width: 620px) {
-    #header-bar {
-        padding-top: 30px;
+/* For phone */
+@media only screen and (max-width: 699px) {
+    .container {
+        width: 90%;
+        margin-left: 5px;
     }
     
-    #footer-bar {
-        padding-bottom: 40px;
+    #contact-us {
+        width: 350px;
+        margin: 0;
+    }
+    
+    .card {
+        width: 28%;
+    }
+    
+    .card p {
+        font-size: 7px;
+    }
+
+    #contact-info {
+        width: 90%;
     }
 }
 

@@ -110,7 +110,7 @@ footer {
   text-align: center;
 }
 
-@media(max-width: 620px) {
+@media(max-width: 699px) {
   header {
       padding: 5px;
   }
@@ -152,7 +152,7 @@ footer {
   }
 
   footer {
-    height: auto;
+    height: fit-content;
     font-size: 8px;
   }
 }

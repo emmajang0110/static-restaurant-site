@@ -10,7 +10,7 @@ h1 {
 
 .container {
     display: grid;
-    width: 50%;
+    width: 80%;
     height: fit-content;
     grid-template-areas: 
     "header-bar"
@@ -37,7 +37,7 @@ h1 {
 }
 
 form {
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
@@ -61,9 +61,61 @@ form label{
     font-size: 12px;
 }
 
-form input{
-    width: 70%;
+form input {
+    width: 300px;
     margin-bottom: 10px;
+}
+
+#remark {
+    width: 300px;
+    height: 100px;
+    text-align: justify;
+}
+
+#reservation-time {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#phone-number {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+/* Info icon */
+.info-tip {
+    padding-top: 2px;
+    padding-left: 5px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.info-tip::before,
+.info-tip::after {
+    --scale: 0;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-250%) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.info-tip::before {
+    content: attr(data-tooltip);
+    font-size: 10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: var(--main-radius);
+    width: max-content;
+    background-color: #FFFFF0;
+    border: 1px solid #ECECEC;
+}
+
+.info-tip:hover::before,
+.info-tip:hover::after {
+    --scale: 1;
 }
 
 button {
@@ -92,44 +144,40 @@ button {
     justify-content: center;
 }
 
-@media only screen and (max-width: 620px) {
-    h1 {
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-    
+/* For phone */
+@media only screen and (max-width: 699px) {
     .container {
-        padding: auto;
+        width: 100%;
     }
-    
+
     #reservation {
-        margin: 10px auto;
+        margin: 0;
     }
     
     form {
-        width: 80%;
-        margin: auto;
-    }
-    
-    form fieldset {
-        padding: 5px;
-        margin: 5px;
-    }
-    
-    form input{
-        margin-bottom: 5px;
-    }
-    
-    button {
-        padding: 5px;
+        width: 90%;
     }
 
-    #header-bar {
-        padding-top: 30px;
+    form fieldset {
+        padding: 10px;
+        margin: 0;
     }
     
-    #footer-bar {
-        padding-bottom: 20px;
+    form input {
+        width: 200px;
+
+    }
+    
+    #remark {
+        width: 200px;
+    }
+    
+    #reservation-time {
+        width: 200px;
+    }
+    
+    #phone-number {
+        width: 200px;
     }
 }
 

@@ -27,10 +27,6 @@ h6 {
     font-size: 12px;
 }
 
-p {
-    font-size: 10px;
-}
-
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
@@ -50,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-gap: 5px;
     font-family: monospace;
     font-weight: 500;
-    font-size: 12px;
     color: black;
     text-align: center;
     padding: var(--main-padding) 30px;
@@ -83,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .explanation {
-    font-size: 15px;
+    font-size: 10px;
     padding: var(--main-padding);
     width: 80%;
     margin: auto;
@@ -171,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: center;
     height: 100px;
+    font-size: 10px;
 }
 
 .dish-name {
@@ -274,8 +270,122 @@ h1, h2, h3, h4, h5, h6 {
     h6 {
         font-size: 10px;
     }
+
+    .container {
+        padding: var(--main-padding) 10px;
+    }
     
-    p {
+    #menu-description {
+        padding: 7px;
+        margin-bottom: 5px;
+    }
+    
+    .menu-promotion-img {
+        height: 80px;
+        margin: 5px;
+    }
+    
+    .promotion-img {
+        height: 60px;
+        width: 25%;
+    }
+    
+    .promotion-img img {
+        height: 80px;
+        width: 150px;
+    }
+    
+    .explanation {
+        padding: 5px;
+    }
+    
+    #main-course {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .text {
+        padding: 5px;
+    }
+    
+    #western, #asian, #pasta, 
+    #starter-and-snacks, #soup-and-salad, #platter, #burger, #pizza,
+    #smoothies, #fresh-fruit-juice, #tea, #dairy, #flings, #others {
+        padding: 5px;
+        border-radius: var(--main-radius);
+        margin-bottom: 5px;
+    }
+    
+    #poultry, #pork, #meat, #fish {
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    
+    #poultry .case, #pork .case, #meat .case, #fish .case {
+        padding: 5px;
+    }
+    
+    .box {
+        padding: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .case {
+        padding: 5px;
+        margin: 5px;
+    }
+    
+    .card {
+        height: 180px;
+        width: 25%;
+        padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .card img {
+        height: 65px;
+        width: 85%;
+    }
+
+    .description {
+        height: 70px;
+    }
+
+    #header-bar {
+        padding-top: 50px;
+    }
+    
+    #footer-bar {
+        padding-bottom: 45px;
+    }
+}
+
+/* For phone */
+@media only screen and (max-width: 699px) {
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    h4 {
+        font-size: 15px;
+    }
+    
+    h5 {
+        font-size: 11px;
+    }
+    
+    h6 {
         font-size: 10px;
     }
     
@@ -284,11 +394,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     #menu-description {
-        padding: 5px;
+        padding: 7px;
         margin-bottom: 5px;
     }
     
     .menu-promotion-img {
+        height: 60px;
         margin: 5px;
     }
     
@@ -332,7 +443,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     #poultry .case, #pork .case, #meat .case, #fish .case {
-        padding: 0;
+        padding: 5px;
     }
     
     .box {
@@ -344,88 +455,36 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .case {
-        padding: 5px;
+        padding: 0;
         margin: 5px;
     }
     
     .card {
-        height: 205px;
+        height: 225px;
         width: 25%;
-        padding: 5px;
+        padding: 10px;
         margin-left: 5px;
         margin-right: 5px;
     }
     
     .card img {
         height: 50px;
-        width: 70%;
+        width: 100%;
     }
-    
+
     .dish {
         height: 150px;
     }
 
     .description {
-        height: 70px;
-    }
-    
-    #sides {
-        background-color: #F88379;
-        grid-area: sides;
-        border-radius: var(--main-radius);
-        padding: var(--main-padding) 30px;
-        margin-bottom: var(--main-padding);
-    }
-    
-    #starter-and-snacks, #soup-and-salad, #platter, #burger, #pizza {
-        background-color: #F7A59E;
-    }
-    
-    #starter-and-snacks .box, #soup-and-salad .box, #platter .box, #burger .box, #pizza .box,
-    #starter-and-snacks .case, #soup-and-salad .case, #platter .case, #burger .case, #pizza .case {
-        background-color: #F7A59E;
-    }
-    
-    #beverage {
-        background-color: #FA9D7C;
-        grid-area: beverage;
-        border-radius: var(--main-radius);
-        padding: var(--main-padding) 30px;
-        margin-bottom: 5px;
-    }
-    
-    #smoothies, #fresh-fruit-juice, #tea, #dairy, #flings, #others {
-        background-color: #FCBAA2;
-    }
-    
-    #smoothies .box, #fresh-fruit-juice .box, #tea .box, #dairy .box, #flings .box, #others .box,
-    #smoothies .case, #fresh-fruit-juice .case, #tea .case, #dairy .case, #flings .case, #others .case  {
-        background-color: #FCBAA2;
-    }
-    
-    #header-bar {
-        grid-area: header-bar;
-        padding-top: 50px;
-        background-color: #FFFFF0;
-        width: 100%;
-        display: block;
-    }
-    
-    #footer-bar {
-        grid-area: footer-bar;
-        padding-bottom: 50px;
-        background-color: #FFFFF0;
-        width: 100%;
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        height: 120px;
     }
 
     #header-bar {
-        padding-top: 30px;
+        padding-top: 35px;
     }
     
     #footer-bar {
-        padding-bottom: 40px;
+        padding-bottom: 55px;
     }
 }

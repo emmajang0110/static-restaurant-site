@@ -82,7 +82,12 @@
                 <fieldset>
                     <legend>Contact Information</legend>
                     <label>Phone Number</label>
-                    <input type="text" id="phone" placeholder="Enter Phone Number..." required>
+                    <div id="phone-number"> 
+                        <input type="text" id="phone" placeholder="Enter Phone Number..." required>
+                        <div class="info-tip" data-tooltip="Please enter your phone number without dash '-'.">
+                            <img src="/images/info-icon.png" width="15px" height="15px">
+                        </div>
+                    </div>
                     <label>Email Address</label>
                     <input type="text" id="email"placeholder="Enter Email Address..." required>
                 </fieldset>
@@ -90,17 +95,31 @@
                 <fieldset>
                     <legend>Reservation Details</legend>
                     <label>Date</label>
-                    <input type="date" id="reservation-date" placeholder="Choose Date..." required>
+                    <input type="date" id="reservation-date" placeholder="Select Date..." required>
                     <label>Time</label>
-                    <input type="time" id="reservation-time" placeholder="Choose Time..." required>
+                    <select id="reservation-time">
+                        <option>-- Select Time --</option>
+                        <option>10:00 a.m.</option>
+                        <option>11:00 a.m.</option>
+                        <option>12:00 p.m.</option>
+                        <option>1:00 p.m.</option>
+                        <option>4:00 p.m.</option>
+                        <option>5:00 p.m.</option>
+                        <option>6:00 p.m.</option>
+                        <option>7:00 p.m.</option>
+                        <option>8:00 p.m.</option>
+                        <option>9:00 p.m.</option>
+                    </select>
                     <label>Number of Adult(s)</label>
                     <input type="text" id="adults" placeholder="Enter Number of Adult(s)..." required>
                     <label>Number of Child(ren)</label>
                     <input type="text" id="children" placeholder="Enter Number of Child(ren)...">
                     <label>Remark</label>
-                    <input type="text" id="remark" placeholder="Leave your message here...">
-                </fieldset>
+                    <textarea style="resize:none;" id="remark" placeholder="Leave your message here..."></textarea>
+                </fieldset> 
 
+                <br>
+                
                 <button>Confirm</button>
             </form>
         </div>
